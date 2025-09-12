@@ -17,7 +17,8 @@ double operation(double a, double b, char opr) {
             res = a / b;
             break;
         case '^':
-            res = pow(a,b);
+            res = pow(a, b);
+            break;
         default:
             throw std::invalid_argument("Неизвестный оператор");
 

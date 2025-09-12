@@ -11,10 +11,10 @@ int main() {
         if (ans=='n') {
             std::cout << "Введите первое число: ";
             std::cin >> a;
-            std::cout << "Введите второе число: ";
-            std::cin >> b;
             std::cout << "Введите оператор: ";
             std::cin >> opr;
+            std::cout << "Введите второе число: ";
+            std::cin >> b;
         } else {
             for(int i = 0; i < 5; i++) {
                 std::cout << history[i] << ' ';
