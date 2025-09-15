@@ -1,27 +1,22 @@
 #include <stdexcept>
 #include <cmath>
-double operation(double a, double b, char opr) {
+#include <string>
+double operation(double a, double b, std::string opr) {
     double res;
-    switch (opr) {
-        case '+':
-            res = a + b;
-            break;
-        case '-':
-            res = a - b;
-            break;
-        case '*':
-            res = a * b;
-            break;
-        case '/':
-            if (b == 0) throw std::invalid_argument("Деление на 0");
-            res = a / b;
-            break;
-        case '^':
-            res = pow(a, b);
-            break;
-        default:
-            throw std::invalid_argument("Неизвестный оператор");
-
+    if (opr == "+") {
+        res = a + b;
+    } else if (opr == "-") {
+        res = a - b;
+    } else if (opr == "*") {
+        res = a * b;
+    } else if (opr == "/") {
+        if (b == 0) throw std::invalid_argument("Деление на 0");
+        res = a / b;
+    } else if (opr == "^") {
+           res = pow(a, b);
+    } else {
+        throw std::invalid_argument("Неизвестный оператор");
     }
+
     return res;
 }
